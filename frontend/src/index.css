@@ -272,12 +272,15 @@ h1 {
   #description, #amount, #person-option {
     max-width: 100%;
   }
+  #amount{
+    margin-top: 20px;
+  }
 
   #split-button, #submit-button {
     max-width: 100%;
     width: 45%;
     margin-top: 5px;
-    margin-left: 80px;
+    margin-left: 75px;
     
   }
 
