@@ -14,8 +14,8 @@ function App(){
 
   async function fetchData(){
     const [res1, res2] = await Promise.all([
-      fetch("http://localhost:5000/transactions"),
-      fetch("http://localhost:5000/balance")
+      fetch("https://iou-tracker-h8ik.onrender.com/transactions"),
+      fetch("https://iou-tracker-h8ik.onrender.com/balance")
     ])
 
     const data1 = await res1.json()
@@ -28,7 +28,7 @@ function App(){
   }
 
   async function handleSettle(id){
-    const url = `http://localhost:5000/transactions/${id}/settle`
+    const url = `https://iou-tracker-h8ik.onrender.com/transactions/${id}/settle`
 
     const response = await fetch(url, {
       method: "PATCH"
@@ -40,7 +40,7 @@ function App(){
   }  
 
   async function handleDelete(id){
-    const url = `http://localhost:5000/transactions/${id}`
+    const url = `https://iou-tracker-h8ik.onrender.com/transactions/${id}`
 
     const response = await fetch(url, {
       method: "DELETE"
@@ -56,7 +56,7 @@ function App(){
   }
 
   async function handleClear(){
-    const url = 'http://localhost:5000/transaction'
+    const url = 'https://iou-tracker-h8ik.onrender.com/transaction'
     
     const response = await fetch(url, {
         method: "DELETE"

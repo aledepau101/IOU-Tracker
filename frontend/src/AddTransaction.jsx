@@ -7,7 +7,7 @@ function AddTransaction({onAdd}){
 
 
     async function handleSubmit(){
-        const url = "http://localhost:5000/transactions";
+        const url = "https://iou-tracker-h8ik.onrender.com/transactions";
         
         const response = await fetch(url, {
             method: "POST",
