@@ -75,7 +75,7 @@ function App(){
         <div className="left-column">
           <div className="balance-card">
             <p className="balance-label">Current Balance</p>
-            <h2 className="balance-amount">${balance.balance.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</h2>
+            <h2 className="balance-amount">${Math.min(balance.balance, 9999999999999999).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</h2>
             <p className="balance-sub">{balance.summary}</p>
           </div>
 
@@ -92,7 +92,7 @@ function App(){
                     <div className="transaction-item" key={tx.id}>
                     <div className="transaction-info">
                         <p className="transaction-desc" style={{textDecoration: tx.settled ? "line-through" : "none", textDecorationColor: tx.settled ? "black" : "transparent", textDecorationThickness: "3px"}}>
-                            {tx.description}
+                            {tx.description.length > 25 ? tx.description.slice(0, 25) + "..." : tx.description}
                         </p>
                         <p className="transaction-sub" style={{textDecoration: tx.settled ? "line-through" : "none", textDecorationColor: tx.settled ? "black" : "transparent", textDecorationThickness: "3px"}}>
                             Paid by {tx.paid_by === "me" ? "Alex" : "Adrian"} - {new Date(tx.created_at).toLocaleDateString('en-us', {month: 'long', day: 'numeric'})}
@@ -100,7 +100,7 @@ function App(){
                     </div>
 
                     <p className="transaction-amount">
-                        {tx.paid_by === "me" ? "+" : "-"}${tx.amount.toFixed(2)}
+                        {tx.paid_by === "me" ? "+" : "-"}${Math.min(tx.amount, 99999).toFixed(2)}
                     </p>
 
                     <div className="transaction-buttons">

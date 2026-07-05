@@ -197,6 +197,10 @@ h1 {
   margin-bottom: 30px;
 }
 
+#person{
+    color: grey;
+}
+
 #split-button {
   width: 100%;
   max-width: 150px;
