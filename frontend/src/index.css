@@ -4,7 +4,7 @@
 }
 
 /* Larger Screens - Mobile */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .main-layout{
     flex-direction: column;
   }
