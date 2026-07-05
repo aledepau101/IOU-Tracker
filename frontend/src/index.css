@@ -274,13 +274,11 @@ h1 {
   }
 
   #split-button, #submit-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     max-width: 100%;
     width: 45%;
-    margin: 2px;
-
+    margin-top: 5px;
+    margin-left: 20px;
+    
   }
 
   .form-buttons {
