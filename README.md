@@ -1,4 +1,4 @@
-# IOU Tracker
+IOU Tracker
 
 A full-stack expense tracking application built with React, Flask, and SQLite that helps users track shared expenses and automatically calculates who owes money.
 
