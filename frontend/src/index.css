@@ -251,44 +251,35 @@ h1 {
   border-radius: 8px;
 }
 
-@media (max-width: 768px) {
+ @media (max-width: 768px) {
   .main-layout {
     flex-direction: column;
   }
 
   .right-column {
     margin-top: 0;
+    width: 100%;
   }
 
-  .main-layout {
-    flex-direction: column;
-  }
-
-  .right-column {
-    margin-top: 0;
+  .transaction-card {
+    width: 100%;
   }
 
   h1 {
     font-size: 32px;
   }
 
-  #description {
+  #description, #amount, #person-option {
     max-width: 100%;
   }
 
-  #amount,
-  #person-option {
-    display: block;
-    width: 100%;
+  #split-button, #submit-button {
     max-width: 100%;
-    margin-right: 0;
-    margin-bottom: 10px;
+    width: 45%;
   }
 
-  #split-button,
-  #submit-button {
-    width: 48%;
-    max-width: none;
-    margin-left: 0;
+  .form-buttons {
+    justify-content: center;
+    gap: 10px;
   }
 }
