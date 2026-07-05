@@ -4,37 +4,13 @@
 }
 
 /* Larger Screens - Mobile */
-@media (max-width: 768px) {
-  .main-layout{
-    flex-direction: column;
-  }
-  
-  .right-column{
-    margin-top: 0;
-    width: 100%;
+@media (min-width: 768px) {
+  .container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
-  .transaction-card{
-    width: 100%;
-  }
-
-  h1{
-    font-size: 32px;
-  }
-
-  #description, #amount, #person-option{
-    max-width: 100%;
-  }
-
-  #split-button, #submit-button{
-    max-width: 100%;
-    width: 45%;
-  }
-
-  .form-buttons{
-    justify-content: center;
-    gap: 10px;
-  }
 }
 
 * {
@@ -77,7 +53,6 @@ h1 {
   margin-top: -2rem; 
 }
 
-/* Stack columns and reset offset on narrow screens */
 @media (max-width: 768px) {
   .main-layout {
     flex-direction: column;
@@ -85,6 +60,38 @@ h1 {
 
   .right-column {
     margin-top: 0;
+  }
+
+  .main-layout {
+    flex-direction: column;
+  }
+
+  .right-column {
+    margin-top: 0;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  #description {
+    max-width: 100%;
+  }
+
+  #amount,
+  #person-option {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  #split-button,
+  #submit-button {
+    width: 48%;
+    max-width: none;
+    margin-left: 0;
   }
 }
 
