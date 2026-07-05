@@ -5,10 +5,35 @@
 
 /* Larger Screens - Mobile */
 @media (min-width: 768px) {
-  .container {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+  .main-layout{
+    flex-direction: column;
+  }
+  
+  .right-column{
+    margin-top: 0;
+    width: 100%;
+  }
+
+  .transaction-card{
+    width: 100%;
+  }
+
+  h1{
+    font-size: 32px;
+  }
+
+  #description, #amount, #person-option{
+    max-width: 100%;
+  }
+
+  #split-button, #submit-button{
+    max-width: 100%;
+    width: 45%;
+  }
+
+  .form-buttons{
+    justify-content: center;
+    gap: 10px;
   }
 }
 
