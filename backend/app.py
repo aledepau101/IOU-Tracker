@@ -5,7 +5,7 @@ import os
 
 #Start Application
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=["https://iou-tracker-brown.vercel.app"])
 
 #Storing Database
 DB_PATH = os.path.join(os.path.dirname(__file__), "iou.db")
