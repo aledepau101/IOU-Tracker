@@ -7,7 +7,7 @@ function AddTransaction({onAdd}){
 
 
     async function handleSubmit(){
-        const url = "https://iou-tracker-h8ik.onrender.com/transactions";
+        const url = "https://iou-tracker-production.up.railway.app/transactions";
         
         const response = await fetch(url, {
             method: "POST",
